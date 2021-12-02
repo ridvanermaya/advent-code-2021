@@ -4,7 +4,9 @@
   "description": "Advent Code 2021 - Day 1",
   "main": "index.js",
   "dependencies": {
+    "@types/lodash": "^4.14.177",
     "@types/node": "^16.11.11",
+    "lodash": "^4.17.21",
     "typescript": "^4.5.2"
   },
   "devDependencies": {},

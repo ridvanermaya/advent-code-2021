@@ -1,8 +1,11 @@
 import { readFileSync } from 'fs';
-import path from 'path';
+import { join } from 'path';
 
 export function getInput(fileName: string): Array<number> {
-  const input: Array<string> = readFileSync(path.join(__dirname, `./inputs/${fileName}`), 'utf-8').split('\n');
+  const input: Array<string> = readFileSync(
+    join(__dirname, `./inputs/${fileName}`),
+    'utf-8'
+  ).split('\n');
 
   const inputAsNumber: Array<number> = input.map((string) => +string);
 
@@ -13,12 +16,10 @@ export function getCountOfIncreasedDepth(input: Array<number>): number {
   let count: number = 0;
 
   input.forEach((number, index) => {
-    if(number < input[index + 1]) {
+    if (number < input[index + 1]) {
       count++;
     }
-  })
+  });
 
   return count;
 }
-
-console.log(getCountOfIncreasedDepth(getInput('day-1-part-1-input.txt')));
