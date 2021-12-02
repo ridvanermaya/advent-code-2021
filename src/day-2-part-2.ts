@@ -32,19 +32,22 @@ export function getCommand(command: string): Command {
 export function calculateFinalPosition(input: Array<Command>): number {
   let x: number = 0;
   let y: number = 0;
+  let aim: number = 0;
 
   input.forEach((command) => {
     switch (command.direction) {
       case 'forward':
         x += command.value;
+        y += command.value * aim;
         break;
       case 'down':
-        y += command.value;
+        aim += command.value;
         break;
       case 'up':
-        y -= command.value;
+        aim -= command.value;
         break;
     }
   });
+
   return Math.abs(x * y);
 }
