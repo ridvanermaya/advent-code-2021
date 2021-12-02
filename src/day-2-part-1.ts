@@ -48,3 +48,9 @@ export function calculateFinalPosition(input: Array<Command>): number {
   });
   return Math.abs(x * y);
 }
+
+const input = getInput('day-2-input.txt');
+const finalPosition = calculateFinalPosition(input);
+
+console.log(`Day 2 Part 1`);
+console.log(`The final position is ${finalPosition}`);

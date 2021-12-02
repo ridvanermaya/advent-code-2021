@@ -36,3 +36,9 @@ export function getCountOfIncreasedWindowSum(input: Array<number>): number {
 export function getSumOfWindow(input: Array<number>): number {
   return sum(input);
 }
+
+const input = getInput('day-1-input.txt');
+const count = getCountOfIncreasedWindowSum(input);
+
+console.log(`Day 1 Part 2`);
+console.log(`The count of increased window is ${count}`);

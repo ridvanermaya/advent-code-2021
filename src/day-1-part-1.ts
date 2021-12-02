@@ -23,3 +23,9 @@ export function getCountOfIncreasedDepth(input: Array<number>): number {
 
   return count;
 }
+
+const input = getInput('day-1-input.txt');
+const count = getCountOfIncreasedDepth(input);
+
+console.log(`Day 1 Part 1`);
+console.log(`The count of increased depth is ${count}`);
