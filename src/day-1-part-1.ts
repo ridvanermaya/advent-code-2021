@@ -20,3 +20,5 @@ export function getCountOfIncreasedDepth(input: Array<number>): number {
 
   return count;
 }
+
+console.log(getCountOfIncreasedDepth(getInput('day-1-part-1-input.txt')));
