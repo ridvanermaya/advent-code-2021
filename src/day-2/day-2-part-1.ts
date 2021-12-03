@@ -8,7 +8,7 @@ export interface Command {
 
 export function getInput(fileName: string): Array<Command> {
   const input: Array<string> = readFileSync(
-    join(__dirname, `./inputs/${fileName}`),
+    join(__dirname, `../inputs/${fileName}`),
     'utf-8'
   ).split('\n');
 

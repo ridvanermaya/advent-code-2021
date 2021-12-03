@@ -4,7 +4,7 @@ import { join } from 'path';
 export function getInput(fileName: string): Array<Array<string>> {
   const inputAsMatrix: Array<Array<string>> = [];
   const input: Array<string> = readFileSync(
-    join(__dirname, `./inputs/${fileName}`),
+    join(__dirname, `../inputs/${fileName}`),
     'utf-8'
   ).split('\n');
 
